@@ -1,0 +1,16 @@
+.bg-login-image {
+    background: url("../img/bg-login.png");
+    background-position: center;
+    background-size: cover;
+    border: 10px;
+}
+.sizeDiv{
+    width: 40vw;
+}
+.bg-register{
+
+
+    background-color: #3333ff;
+}
+  
+
