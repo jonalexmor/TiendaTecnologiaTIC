@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <meta charset="UTF-8">
-        <title>Mi perfil - Tienda Tecnologica TIC</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta charset="UTF-8">
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -15,16 +19,27 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+              integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+              crossorigin="anonymous" />
         <script src="js/profile.js"></script>
         <link rel="stylesheet" href="css/main.css" />
+        <link href="css/business-casual.css" rel="stylesheet">
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+        <title>Alquiler | Tienda Tecnología TIC</title>
+        <link rel="shortcut icon" href="img/hardware.png">
     </head>
     <body>
-        <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Perfil </a>
+        <nav class="navbar navbar-dark bg-transparent">
+            <a class="navbar-brand" href="#">Actualiza tu perfil y lleva el control de tu alquileres</a>
             <div id="user-data-profile">
                 <span class="badge badge-light mr-3" id="user-credito"></span>
                 <div class="btn-group">
-                    <button type="button" class="btn btn-primary dropdown-toggle"
+                    <button type="button" class="btn btn-warning dropdown-toggle"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span id="ajustes">Ajustes </span>
                     </button>
@@ -35,77 +50,144 @@
                 </div>
             </div>
         </nav>
+        <h1 class="site-heading text-center text-white d-none d-lg-block">
+            <span class="site-heading-upper text-warning mb-3">La mejor opción para su negocio</span>
+            <span class="site-heading-lower">Tienda Tecnología TIC</span>
+        </h1>
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="login.html">Tienda Tecnología TIC</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav mx-auto">
+                        
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="about.html">Historia</a>
+                        </li>
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="services.html">Servicios</a>
+                        </li>
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="store.html">Visítanos</a>
+                        </li>
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="contact.html">Contacto</a>
+                        </li>
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="blog.html">Blog</a>
 
-        <main class="p-4 d-flex flex-column align-items-center">
-            <h1>Historial de alquileres</h1>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="page-section">
+            <div class="container">
 
-            <table class="table d-none" id="historial-table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Categoria</th>
-                        <th scope="col">Novedad</th>
-                        <th scope="col">Fecha</th>
-                        <th scope="col">Devolver</th>
-                    </tr>
-                </thead>
-                <tbody id="historial-tbody">
-                </tbody>
-            </table>
-            <div id="historial-vacio" class="alert alert-info" role="alert">No hay elementos en el historial</div>
+                <div class="row">
+                    <div class="col-xl-12 mx-auto">
+                        <div class="cta-inner text-center rounded">
+                            <main class="p-4 d-flex justify-content-center">
+                                <div class="table-responsive">
+                                    <h1 class="display-3 text-white d-none d-lg-block">Historial de alquileres</h1>
 
-            <h1 class="mt-3">Editar perfil</h1>
-
-            <div class="card" id="form-container">
-                <div class="card-body">
-                    <form method="GET" id="form-modificar" class="pb-4">
-                        <div class="form-group">
-                            <label for="input-username">Username</label>
-                            <input type="text" class="form-control disabled" id="input-username" placeholder="Username" readonly>
+                                    <table class="table-secondary table-striped table-hover table-striped table-bordered table align-middle" id="historial-table">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Nombre</th>
+                                                <th scope="col">Categoria</th>
+                                                <th scope="col">Novedad</th>
+                                                <th scope="col">Fecha</th>
+                                                <th scope="col">Devolver</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="historial-tbody">
+                                        </tbody>
+                                    </table>
+                            </main>
                         </div>
-                        <div class="form-group">
-                            <label for="input-contrasena">Contraseña</label>
-                            <input type="password" class="form-control" id="input-contrasena" placeholder="Contraseña" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-nombre">Nombre</label>
-                            <input type="text" class="form-control" id="input-nombre" placeholder="Nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-apellidos">Apellidos</label>
-                            <input type="text" class="form-control" id="input-apellidos" placeholder="Apellidos" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-email">Email</label>
-                            <input type="text" class="form-control" id="input-email" placeholder="Email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-credito">Credito</label>
-                            <input type="number" step="any" class="form-control" id="input-credito" min="0" max="1000000" placeholder="0" required>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="input-leasing">
-                                <label class="form-check-label" for="input-leasing">Leasing</label>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary" id="modificar-btn">Guardar datos</button>
-                    </form>
-                    <div class="alert alert-danger d-none" id="modificar-error" role="alert">
-                        Error en la modificacación de los datos del usuario
-                    </div>
-                    <div id="modificar-exito" class="alert alert-success d-none" role="alert">
-                        Modificación de los datos del usuario realizada correctamente
                     </div>
                 </div>
+            </div>
+            <div id="historial-vacio" class="alert alert-info text-center" role="alert">No hay elementos en el historial</div>
 
+            <h1 class="display-5 text-white text-center d-none d-lg-block">Editar perfil</h1>
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 mx-auto">
+                        <div class="cta-inner rounded">
+                            <main class="p-4 d-flex justify-content-center">
+
+                                <div class="card" id="form-container">
+                                    <div class="card-body">
+                                        <form method="GET" id="form-modificar" class="pb-4 table-secondary">
+                                            <div class="form-group">
+                                                <b> <label for="input-username">Username</label> </b>
+                                                <input type="text" class="form-control disabled" id="input-username" placeholder="Username" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <b> <label for="input-contrasena">Contraseña</label></b>
+                                                <input type="password" class="form-control" id="input-contrasena" placeholder="Contraseña" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <b>  <label for="input-nombre">Nombre</label></b>
+                                                <input type="text" class="form-control" id="input-nombre" placeholder="Nombre" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <b>  <label for="input-apellidos">Apellidos</label></b>
+                                                <input type="text" class="form-control" id="input-apellidos" placeholder="Apellidos" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <b>   <label for="input-email">Email</label></b>
+                                                <input type="text" class="form-control" id="input-email" placeholder="Email" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <b>  <label for="input-credito">Credito</label></b>
+                                                <input type="number" step="any" class="form-control" id="input-credito" min="0" max="1000000" placeholder="0" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="input-leasing">
+                                                    <b><label class="form-check-label" for="input-leasing">Leasing</label></b>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary" id="modificar-btn">Guardar datos</button>
+
+                                        </form>
+                                        <div class="mt-4">
+                                            <button class="btn btn-danger" id="eliminar-cuenta-btn" data-toggle="modal" 
+                                                    data-target="#eliminar-cuenta-modal">Eliminar cuenta</button>
+                                        </div>
+                                        <div class="alert alert-danger d-none" id="modificar-error" role="alert">
+                                            Error en la modificacación de los datos del usuario
+                                        </div>
+                                        <div id="modificar-exito" class="alert alert-success d-none" role="alert">
+                                            Modificación de los datos del usuario realizada correctamente
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </main>
+
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="mt-4">
-                <button class="btn btn-danger" id="eliminar-cuenta-btn" data-toggle="modal" 
-                        data-target="#eliminar-cuenta-modal">Eliminar cuenta</button>
+
+
+            <div class="cta-inner text-center rounded">
+
             </div>
+                    <main>
+
             <div class="modal fade" id="eliminar-cuenta-modal" tabindex="-1" role="dialog" 
                  aria-labelledby="eliminar-cuenta-modal-label" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -130,6 +212,37 @@
             </div>
 
         </main>
+            <footer class="footer text-faded text-center py-5">
+                <div class="container">
+                    <p class="m-0">
+                        <a href="https://twitter.com/?lang=es" class="link">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                        <a href="https://es-la.facebook.com/" class="link">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                        <a href="https://www.instagram.com/" class="link">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </p>
+                    <p class="m-0 mbt">
+                        <a href="..." class="link">Política de privacidad</a> ·
+                        <a href="..." class="link">Aviso legal</a> ·
+                        <a href="..." class="link">Cookies</a>
+                    </p>
+                    <p class="m-0 mbt1">&copy; Tienda Tecnologica TIC 2022</p>
+                </div>
+            </footer>
+        <script src="vendor/jquery/jquery.min.js"></script>
 
-    </body>
+</body>
 </html>

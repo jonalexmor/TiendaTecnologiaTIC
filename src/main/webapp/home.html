@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -22,16 +25,23 @@
 
         <script src="js/main.js"></script>
         <link rel="stylesheet" href="css/main.css" />
-        <title>Inicio - Tienda Tecnologica TIC</title>
+        <link href="css/business-casual.css" rel="stylesheet">
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+        <title>Alquiler | Tienda Tecnología TIC</title>
+        <link rel="shortcut icon" href="img/hardware.png">
     </head>
     <body>
 
-        <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Inicio</a>
+
+        <nav class="navbar navbar-dark bg-transparent">
+            <a class="navbar-brand" href="#">Administra tu cuenta</a>
             <div id="user-data-profile">
                 <span class="badge badge-light mr-3" id="user-credito"></span>
                 <div class="btn-group">
-                    <button type="button" class="btn btn-primary dropdown-toggle"
+                    <button type="button" class="btn btn-warning dropdown-toggle"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span id="ajustes">Ajustes </span>
                     </button>
@@ -42,27 +52,106 @@
                 </div>
             </div>
         </nav>
-        <main class="p-4 d-flex justify-content-center">
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col" id="ordenar-categoria" data-toogle="tooltip" 
-                            data-placement="top" title="Ordenar por categoria">Categoria
-                            <span class="fas fa-sort" id="icono-ordenar"></span></th>
-                        <th scope="col">Tipo</th>
-                        <th scope="col">Inventario</th>
-                        <th scope="col">Novedad</th>
-                        <th scope="col">Precio</th>
-                        <th scope="col">Alquilar</th>
-                    </tr>
-                </thead>
-                <tbody id="articulos-tbody">
+        <h1 class="site-heading text-center text-white d-none d-lg-block">
+            <span class="site-heading-upper text-warning mb-3">La mejor opción para su negocio</span>
+            <span class="site-heading-lower">Tienda Tecnología TIC</span>
+        </h1>
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="login.html">Tienda Tecnología TIC</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav mx-auto">
+                        
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="about.html">Historia</a>
+                        </li>
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="services.html">Servicios</a>
+                        </li>
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="store.html">Visítanos</a>
+                        </li>
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="contact.html">Contacto</a>
+                        </li>
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="blog.html">Blog</a>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="page-section">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col-xl-12 mx-auto">
+                        <div class="cta-inner text-center rounded">
+                            <main class="p-4 d-flex justify-content-center">
+                                <div class="table-responsive">
+                                <table class="table-secondary table-striped table-hover table-striped table-bordered table align-middle">
+                                    <thead class="table-dark">
 
-                </tbody>
-            </table>
-        </main>
+                                        <tr>
+                                            
+                                            <th scope="col">#</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col" id="ordenar-categoria" data-toogle="tooltip" 
+                                                data-placement="top" title="Ordenar por categoria">Categoria
+                                                <span class="fas fa-sort" id="icono-ordenar"></span></th>
+                                            <th scope="col">Tipo</th>
+                                            <th scope="col">Inventario</th>
+                                            <th scope="col">Novedad</th>
+                                            <th scope="col">Precio</th>
+                                            <th scope="col">Alquilar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="articulos-tbody">
 
+                                    </tbody>
+                                </table>
+                            </main>
+                        </div>
+                    </div>
+                        </div>
+                </div>    
+        </section>
+        <footer class="footer text-faded text-center py-5">
+                <div class="container">
+                    <p class="m-0">
+                        <a href="https://twitter.com/?lang=es" class="link">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                        <a href="https://es-la.facebook.com/" class="link">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                        <a href="https://www.instagram.com/" class="link">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </p>
+                    <p class="m-0 mbt">
+                        <a href="..." class="link">Política de privacidad</a> ·
+                        <a href="..." class="link">Aviso legal</a> ·
+                        <a href="..." class="link">Cookies</a>
+                    </p>
+                    <p class="m-0 mbt1">&copy; Tienda Tecnologica TIC 2022</p>
+                </div>
+            </footer>
+        <script src="vendor/jquery/jquery.min.js"></script>
     </body>
 </html>

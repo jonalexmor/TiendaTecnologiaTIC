@@ -1,73 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <meta charset="UTF-8">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-            <!-- Latest compiled and minified CSS -->
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-            <!-- jQuery library -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-            <!-- Popper JS -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-            <!-- Latest compiled JavaScript -->
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="js/index.js"></script>
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
         <link href="css/index.css" rel="stylesheet">
-        <title>Registro - Tienda Tecnologica TIC</title>
+        <link href="css/business-casual.css" rel="stylesheet">
+        <title>Contacto | Tienda Tecnología TIC</title>
+        <link rel="shortcut icon" href="img/hardware.png">
+
     </head>
     <body>
-        <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">Crear cuenta - Tienda Tecnologica TIC</a>
-        </nav>
-        <main class="p-4 d-flex justify-content-center">
-            <div class="card sizeDiv">
-                <div class="card-body bg-primary">
-                    <form id="form-register" class="pb-4">
-                        <div class="form-group">
-                            <label for="input-username">Nombre de usuario</label>
-                            <input type="text" class="form-control" id="input-username" placeholder="Nombre de usuario" required>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="input-contrasena">Contraseña</label>
-                                <input type="password" class="form-control" id="input-contrasena" placeholder="Contraseña" required>
+        <h1 class="site-heading text-center text-white d-none d-lg-block">
+            <span class="site-heading-upper text-primary mb-3">La mejor opción para su negocio</span>
+            <span class="site-heading-lower">Tienda Tecnología TIC</span>
+        </h1>
+        <section class="page-section about-heading">
+            <div class="container">
+                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/contact.jpg" alt="">
+                <div class="about-heading-content">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-10 mx-auto">
+                            <div class="bg-faded rounded p-5">
+                                <h2 class="section-heading mb-4">
+                                    <span class="section-heading-upper">Se parte de nuestra familia</span>
+                                    <span class="section-heading-lower">Registrate</span>
+                                </h2>
+
+
+                                <form id="form-register" class="pb-4">
+                                    <div class="form-group">
+                                        <label for="input-username">Nombre de usuario</label>
+                                        <input type="text" class="form-control" id="input-username" placeholder="Nombre de usuario" required>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="input-contrasena">Contraseña</label>
+                                            <input type="password" class="form-control" id="input-contrasena" placeholder="Contraseña" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="input-contrasena-repeat">Repetir contraseña</label>
+                                            <input type="password" class="form-control" id="input-contrasena-repeat" placeholder="Repetir contraseña" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-nombre">Nombre</label>
+                                        <input type="text" class="form-control" id="input-nombre" placeholder="Nombre" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-apellidos">Apellidos</label>
+                                        <input type="text" class="form-control" id="input-apellidos" placeholder="Apellidos" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-email">Email</label>
+                                        <input type="text" class="form-control" id="input-email" placeholder="Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-credito">Credito</label>
+                                        <input type="number" class="form-control" id="input-credito" placeholder="0" min="0" max="1000000" value="0" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="input-leasing">
+                                            <label class="form-check-label" for="input-leasing">Leasing</label>
+                                        </div>
+                                    </div>
+                                    <input type="submit" class="btn btn-primary" id="register-btn" value="Registrar usuario" />
+                                </form>
+                                <div id="register-error" class="alert alert-danger d-none" role="alert"></div>
+                                <a href="login.html">¿Ya tienes cuenta? Iniciar sesión</a>
                             </div>
-                            <div class="form-group col-md-6">
-                                <label for="input-contrasena-repeat">Repetir contraseña</label>
-                                <input type="password" class="form-control" id="input-contrasena-repeat" placeholder="Repetir contraseña" required>
-                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="input-nombre">Nombre</label>
-                            <input type="text" class="form-control" id="input-nombre" placeholder="Nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-apellidos">Apellidos</label>
-                            <input type="text" class="form-control" id="input-apellidos" placeholder="Apellidos" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-email">Email</label>
-                            <input type="text" class="form-control" id="input-email" placeholder="Email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-credito">Credito</label>
-                            <input type="number" class="form-control" id="input-credito" placeholder="0" min="0" max="1000000" value="0" required>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="input-leasing">
-                                <label class="form-check-label" for="input-leasing">Leasing</label>
-                            </div>
-                        </div>
-                        <input type="submit" class="btn btn-primary" id="register-btn" value="Registrar usuario" />
-                    </form>
-                    <div id="register-error" class="alert alert-danger d-none" role="alert"></div>
-                    <a href="index.html">¿Ya tienes cuenta? Iniciar sesión</a>
+                    </div>
                 </div>
-            </div> 
-        </main>
+            </div>
+        </section>
+        <footer class="footer text-faded text-center py-5">
+            <div class="container">
+                <p class="m-0">
+                    <a href="https://twitter.com/?lang=es" class="link">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                    <a href="https://es-la.facebook.com/" class="link">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                    <a href="https://www.instagram.com/" class="link">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </p>
+                <p class="m-0 mbt">
+                    <a href="..." class="link">Política de privacidad</a> ·
+                    <a href="..." class="link">Aviso legal</a> ·
+                    <a href="..." class="link">Cookies</a>
+                </p>
+                <p class="m-0 mbt1">&copy; Tienda Tecnologica TIC 2022</p>
+            </div>
+        </footer>
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
