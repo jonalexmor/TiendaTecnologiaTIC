@@ -1,4 +1,3 @@
-
 package connection;
 
 import java.sql.Connection;
@@ -32,3 +31,4 @@ public class DBConnection {
     }
     
 }
+
